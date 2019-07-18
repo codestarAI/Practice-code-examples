@@ -1,0 +1,45 @@
+import java.lang.Math; // headers MUST be above the first class
+import java.util.*;
+
+// one class needs to have a main() method
+public class Mother {
+  public int age;
+  public String name;
+  
+  Mother(int a, String n) {
+	this.age = a;
+    this.name = n;
+  }
+  
+  public String check(Child childName) {
+	String outcome = "";
+    if(this.name.equals(childName.name)) {
+    	outcome = "you are the child of this lady";
+    }else{outcome = "you are not the child of this lady";}
+    return outcome;
+  }
+  
+}
+public class Child  {
+  public int age;
+  public String name;
+	
+  Child(int age, String name) {
+  	this.age = age;
+    this.name = name;
+  }
+  
+}
+
+public class tester{
+
+  public static void main(String[] args) {
+	Mother martha = new Mother(54, "ellie");
+    
+    Child samantha = new Child(12, "carson");
+   System.out.println(martha.check(samantha));                       
+                               
+
+  }
+
+}
