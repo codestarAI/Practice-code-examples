@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+double CalcAreaForm(double x, double y);
+void checkAreaValue(double areaVal);
+
+int main()
+{
+    double val1 = 7, val2 = 1;
+    double res = CalcAreaForm(val1, val2);
+    printf("%.2f\n", res);
+    checkAreaValue(res);
+    return 0;
+}
+
+void checkAreaValue(double areaVal) {
+    if(areaVal >= 100) printf("A large area of space");
+    else if(areaVal >= 50 && areaVal <= 100) printf("a medium sized area of space");
+    else {
+        printf("a small area of space");
+    }
+}
+
+double CalcAreaForm(double x, double y) {
+    if(x != 0 && y != 0) {
+        return x * y;
+    }
+    return 0;
+    
+    
+}
